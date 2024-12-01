@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Code-artist</title>
+        <link rel="icon" href="./media/logo-removebg-preview.png" type="image/jpeg">
+        <link rel="stylesheet" href="code-artist.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <header>     
+            <a href="index.html"> <img id="team-logo" src="./media/logo-removebg-preview.png" alt="Team-logo"></a>
+            <h1>Team 60</h1>
+            <button id="dark-mode-toggle"><img src="./media/dark-mode (1).png" alt="Dark Mode"></button>
+            <button id="menu-button">Menu</button>
+            <div id="menu-icons">
+                <a class="button" href="./index.html">Home</a>
+                <a class="button" href="./hour-of-code.html">Hour of Code</a>
+                <a class="button" href="./team-members.html">Team-members</a>
+                <a class="button" href="./code-artist.html">Code-artist</a>
+                <a class="button" href="./web-project.html">Web-Project</a>
+                <a class="button" href="./code-art.html">Code-Art</a>
+            </div> 
+        </header>
+        
+        <div style="text-align:center">
+            <div id="canvas-container">
+                <canvas id="art-canvas" width="740" height="580">
+                </canvas>
+            </div>
+            <button id="draw-button">Draw</button>
+        </div>  
+
+        <script type="text/javascript">
+            document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+            });
+
+            document.getElementById('menu-button').addEventListener('click', function() {
+                let menu = document.getElementById('menu-icons');
+                menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                let canvas = document.getElementById("art-canvas");
+                let context = canvas.getContext("2d");
+
+                let currentShape = 0;
+
+                function drawNextShape(context) {
+                    let centerX = canvas.width / 2;
+                    let centerY = canvas.height / 2;
+
+                    function drawCircle() {
+                        let radius = Math.random() * 100 + 30;
+                        let colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33B5', '#FFBD33'];
+                        context.beginPath();
+                        context.arc(centerX + Math.random() * 100, centerY + Math.random() * 100, radius, 0, Math.PI * 2);
+                        context.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+                        context.fill();
+                        context.closePath();
+                    }
+
+                    function drawPolygon() {
+                        let sides = Math.floor(Math.random() * 6) + 3; 
+                        let radius = Math.random() * 80 + 30;
+                        let angle = (Math.PI * 2) / sides;
+                        context.beginPath();
+                        for (let i = 0; i < sides; i++) {
+                            let x = centerX + radius * Math.cos(i * angle);
+                            let y = centerY + radius * Math.sin(i * angle);
+                            context.lineTo(x, y);
+                        }
+                        context.closePath();
+                        context.fillStyle = '#00FF00';
+                        context.fill();
+                    }
+
+                    if (currentShape === 0) {
+                        drawCircle();
+                    } else if (currentShape === 1) {
+                        drawPolygon();
+                    }
+
+                    currentShape = (currentShape + 1) % 2;
+                }
+
+                document.getElementById('draw-button').addEventListener('click', function() {
+                    drawNextShape(context);
+                });
+            });
+        </script>
+    </body>
+</html>

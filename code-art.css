@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #336178;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
+#team-logo {
+    width: px;
+    vertical-align: middle;
+}
+
+h1 {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 24px;
+}
+
+#dark-mode-toggle, #menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#menu-icons {
+    display: none;
+    text-align: center;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
+#menu-icons a {
+    display: block;
+    margin: 10px 0;
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#canvas-container {
+    position: relative;
+    display: inline-block;
+    border: 10px solid black;
+}
+
+#art-canvas {
+    display: block;
+    margin: 30px auto;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#draw-button {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 30px;
+    background-color: #336178;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#draw-button:hover {
+    background-color: #205772;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+body.dark-mode #art-canvas {
+    background-color: #444;
+    border-color: #fff;
+}
+
+body.dark-mode #draw-button {
+    background-color: #28a745;
+}
+
+body.dark-mode #draw-button:hover {
+    background-color: #218838;
+}

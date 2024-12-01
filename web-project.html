@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Team 60
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>web-project</title>
+        <link rel="icon" href="./media/logo-removebg-preview.png" type="image/jpeg">
+        <link rel="stylesheet" href="web-project.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <header>     
+            <a href="index.html"> <img id="team-logo" src="./media/logo-removebg-preview.png" alt="Team-logo"></a>
+            <h1>Team 60</h1>
+            <button id="dark-mode-toggle"><img src="./media/dark-mode (1).png"></button>
+            <button id="menu-button">Menu</button>
+            <div id="menu-icons" class="hidden">
+                <a class="button" href="./index.html">Home</a>
+                <a class="button" href="./hour-of-code.html">Hour of Code</a>
+                <a class="button" href="./team-members.html">Team-members</a>
+                <a class="button" href="./code-artist.html">Code-artist</a>
+                <a class="button" href="./web-project.html">Web-Project</a>
+                <a class="button" href="./code-art.html">Code-Art</a>
+            </div> 
+        </header>
+
+        <section>
+            <h1 id="Code-Academy">Code Academy</h1>
+            <div class="flashcards-container">
+                <div class="flashcard">
+                    <div class="front">
+                        <h3>What is Codecademy?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Codecademy is an online platform that offers interactive coding lessons and courses in various programming languages and technologies.</p>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="front">
+                        <h3>How are lessons structured on Codecademy?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Lessons are interactive and consist of written instructions, coding exercises, quizzes, and projects to reinforce learning.</p>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="front">
+                        <h3>What programming languages can you learn on Codecademy?</h3>
+                    </div>
+                    <div class="back">
+                        <p>Codecademy offers courses in Python, JavaScript, Java, Ruby, C++, C#, HTML, CSS, SQL, PHP, R, and Swift, among others.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h4>Profiles</h4>
+            <div class="our-profiles">
+                <div class='member'>
+                    <img src="./media/Jeyhun.jpg" alt='Jeyhun Naghiyev'>
+                    <h3>Jeyhun Naghiyev</h3>
+                    <button class="more-info" onclick='redirectTo("https://www.codecademy.com/profiles/Lion_2056")'>Code Academy</button>
+                </div>
+                <div class='member'>
+                    <img src="./media/Leman.jpg" alt='Laman Guliyeva'>
+                    <h3>Laman Guliyeva</h3>
+                    <button class="more-info" onclick='redirectTo("https://www.codecademy.com/profiles/LamanGuliyeva")'>Code Academy</button>
+                </div>
+                <div class='member'>
+                    <img src="./media/Nihad.jpg" alt='Nihad Azizli'>
+                    <h3>Nihad Azizli</h3>
+                    <button class="more-info" onclick='redirectTo("https://www.codecademy.com/profiles/NihadAzizli")'>Code Academy</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div></div>
+        </section>
+
+        <footer>
+            <img id='ADA' src="./media/ada_logo_white.png">
+            <h2>Links</h2>
+            <a href="https://www.instagram.com/site_team_60/profilecard/?igsh=cjRmYng1MnF0dW1p"><img id="Instagram" src="./media/instagram.png"></a>
+            <a href="https://www.codecademy.com/"><img id="Code-academy" src="./media/web-programming.png"></a>
+        </footer>
+
+        <script type="text/javascript">
+            document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+            });
+        </script>
+    </body>
+</html>

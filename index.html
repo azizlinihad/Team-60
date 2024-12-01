@@ -1,0 +1,125 @@
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Team 60
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Team 60</title>
+        <link rel="icon" href="./media/logo-removebg-preview.png" type="image/jpeg">
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="scripts.js"></script>
+    </head>
+    <body>
+
+<header>     
+    <a href="index.html"> <img id="team-logo" src="./media/logo-removebg-preview.png" alt="Team-logo"></a>
+    <h1>Innovators</h1>
+    <button id="dark-mode-toggle"><img src="./media/dark-mode (1).png"></button>
+    <button id="menu-button">Menu</button>
+    <div id="menu-icons" class="hidden">
+        <a class="button" href="./index.html">Home</a>
+        <a class="button" href="./hour-of-code.html">Hour of Code</a>
+        <a class="button" href="./team-members.html">Team-members</a>
+        <a class="button" href="./code-artist.html">Code-artist</a>
+        <a class="button" href="./web-project.html">Web-Project</a>
+        <a class="button" href="./code-art.html">Code-Art</a>
+    </div> 
+</header>
+
+<section class="team-members">
+
+    <div class='member'>
+        <img src="./media/Jeyhun.jpg" alt='Jeyhun Naghiyev'>
+        <h3> Member 1</h3>
+        <button class="more-info" onclick='redirectTo("team-members.html")'>More info</button>
+    </div>
+  
+    <div class='member'>
+        <img src="./media/Leman.jpg" alt='Laman Guliyeva'>
+        <h3> Member 2</h3>
+        <button class="more-info" onclick='redirectTo("team-members.html")'>More info</button>
+    </div>
+
+    <div class='member'>
+        <img src="./media/Nihad.jpg" alt='Nihad Azizli'>
+        <h3> Member 3</h3>
+        <button class="more-info" onclick='redirectTo("team-members.html")'>More info</button>
+    </div>
+
+    <div class='member'>
+        <img src="./media/Faig.jpg" alt='Faig Tahmazov'>
+        <h3> Member 4</h3>
+        <button class="more-info" onclick='redirectTo("team-members.html")'>More info</button>
+    </div>
+</section>
+
+<section class="achievements">
+    <h2 id="#achievements">Achievements</h2>
+    <p class="achievement"><a href="hour-of-code.html" style="color: var(--text-dark);text-decoration: underline;">Hosted a successful Hour of Code event</a></p>
+    <p class="achievement">Constructed website</p>
+    <p class="achievement"><a href="https://youtu.be/prOPZcMq7BY?si=iY5CyLRDF0V2pxFf" style="color: var(--text-dark);text-decoration: underline;">Constructed Logic Gates</a></p>
+</section>
+
+<section class="Logic Gates">
+    <h2>Logic Gates</h2>
+    <img class='logic-gate' src="./media/gate-2.jpg">
+    <img class='logic-gate' src="./media/gate-1.jpg">
+    <img class='logic-gate' src="./media/gate-3.jpg">
+
+    <div class="flashcards-container">
+        <div class="flashcard">
+            <div class="front">
+                <h3>What are logic gates?</h3>
+            </div>
+            <div class="back">
+                <p>Logic gates are electronic circuits that perform logical operations on one or more binary inputs to produce a single binary output.</p>
+            </div>
+        </div>
+        <div class="flashcard">
+            <div class="front">
+                <h3>What is the purpose of logic gates?</h3>
+            </div>
+            <div class="back">
+                <p>Logic gates are used to perform basic logical functions in digital circuits and are the building blocks of digital electronics.</p>
+            </div>
+        </div>
+        <div class="flashcard">
+            <div class="front">
+                <h3>Where are logic gates commonly used?</h3>
+            </div>
+            <div class="back">
+                <p>Logic gates are used in microprocessors, memory devices, and circuits.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>  
+    <section class="team-info"></section>
+    <h2 style="color: var(--body);">About Us</h2>
+    <p style="text-align: center;">
+        Team 60 was established at the beginning of the semester by our instructors and will continue to operate until the semester concludes. Our team consists of four members, all from the same CRN: Jeyhun, Laman, Nihad, and Faig. Together, we have accomplished impressive work and are committed to maintaining this momentum in the future.
+
+        Throughout the semester, we have completed three significant assignments: constructing logic gates, participating in the Hour of Code initiative, and currently developing a website. In each of these projects, we pushed ourselves beyond our limits, demonstrating determination and resilience. Even when faced with setbacks, we persevered by trying repeatedly until we achieved success.
+
+        For instance, during our first assignment—creating logic gates—we faced considerable challenges. Our initial attempt in the lab was far from successful. After an hour of trial and error, we experienced frustration and discouragement. However, we refused to let failure define us. Instead, we analyzed our mistakes, identified areas for improvement, and worked diligently to correct them. By the end of the assignment, we had successfully completed the task, showcasing our ability to learn and adapt.
+
+        Our journey as Team 60 has been one of growth, collaboration, and resilience. With each assignment, we have honed our skills and deepened our teamwork, proving that persistence and a positive mindset can lead to remarkable achievements.
+    </p>
+
+    <a href="https://youtu.be/prOPZcMq7BY?si=iY5CyLRDF0V2pxFf"><img id='YouTube' src="./media/youtube.png"></a>
+    <a href="https://www.instagram.com/site_team_60/profilecard/?igsh=cjRmYng1MnF0dW1p"><img id="Instagram" src="./media/instagram.png"></a>
+    <img class='ADA-logo' src="./media/ada_logo_white.png" alt="ADA logo">
+    
+</footer>
+
+<script type="text/javascript">
+    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+
+ </body>
+</html>

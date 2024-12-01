@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Team 60
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title> Hour of Code</title>
+        <link rel="icon" href="./media/logo-removebg-preview.png" type="image/jpeg"> 
+        <link rel="stylesheet" href="hour-of-code.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <header>
+            <h1>Team 60</h1>
+            <a href="index.html"> <img  id='team-logo-2' src="./media/logo-removebg-preview.png" alt="Team-logo-2"></a>
+            <button id="dark-mode-toggle"><img src="./media/dark-mode (1).png"></button>
+            <button id="menu-button" >Menu</button>
+            <div id="menu-icons" class="hidden">
+                <a class="button" href="./index.html">Home</a>
+                <a class="button" href="./hour-of-code.html">Hour of Code</a>
+                <a class="button" href="./team-members.html">Team-members</a>
+                <a class="button" href="./code-artist.html">Code-artist</a>
+                <a class="button" href="./web-project.html">Web-Project</a>
+                <a class="button" href="./code-art.html">Code-Art</a>
+            </div>
+        </header>
+        <h2 id="hour-of-code">Hour of Code</h2>
+        <div class="flashcards-container">
+            <div class="flashcard">
+                <div class="front">
+                    <h3>What is the Hour of Code?</h3>
+                </div>
+                <div class="back">
+                    <p>The Hour of Code is a global initiative that introduces people to computer science through one-hour coding tutorials.</p>
+                </div>
+            </div>
+            <div class="flashcard">
+                <div class="front">
+                    <h3>Why should I learn to code?</h3>
+                </div>
+                <div class="back">
+                    <p>Learning to code can open up many career opportunities and help you develop problem-solving skills.</p>
+                </div>
+            </div>
+            <div class="flashcard">
+                <div class="front">
+                    <h3>How do I start coding?</h3>
+                </div>
+                <div class="back">
+                    <p>You can start coding by taking online tutorials, joining coding bootcamps, or enrolling in computer science courses.</p>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2 style="color: var(--ada-red); font-size: 3rem; text-align: center;">Photos</h2>
+            <img id='photo-1' src="./media/code-2.jpg">
+            <img id='photo-1' src="./media/CODE-1.jpg">
+            <img id='photo-1' src="./media/code-3.jpg">
+            <img id='photo-1' src="./media/code-4.jpg">
+            <img id="photo-1" src="./media/code-5.jpg">
+            <img id="photo-1" src="./media/code-6.jpg">
+        </section>
+
+        <section>
+            <div>
+                <h2 class="details"><strong>Details from the event</strong></h2>
+                <p><a class="details-2">On November 5, 2024, at 11:00 AM, we held an Hour of Code event at Shusha (Karabakh) Secondary School No. 1 in Baku, where 25 enthusiastic students gathered to explore the basics of coding. The event kicked off with a brief introduction to ADA University, offering students insight into the university's dedication to fostering learning and innovation. We then introduced the concept of coding, discussing its relevance in today’s tech-focused world. One of our team members led a short tutorial, demonstrating a simple example on Code.org to familiarize the students with the platform. After the demonstration, students had the opportunity for hands-on practice, engaging in coding exercises independently. Throughout the session, our team members were available to answer questions and offer guidance, ensuring every student could successfully complete the tasks and gain confidence in their first coding experience.</a></p>
+            </div>
+        </section>
+
+        <footer>
+            <h3 style="font-size:2rem">More content from the Event</h3>
+
+            <img  class='ADA-logo' src="./media/ada_logo_white.png">
+            <div class="media">
+                <a href="https://youtube.com/shorts/k1Us84suR4E?si=VI1F5R2Ng0DkChCM&sfnsn=wa"><img  id="YouTube" src="./media/youtube.png"></a>
+                <a href="https://www.facebook.com/share/p/1Jgu4xUB6R/"><img id="facebook" src="./media/facebook.png"></a>
+                <a href="https://www.instagram.com/p/DCMkv0ZszFf/?img_index=1"><img  id='Instagram' src="./media/instagram.png"></a>
+            </div>
+        </footer>
+
+        <script type="text/javascript">
+            document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+            });
+        </script>
+    </body>
+</html>

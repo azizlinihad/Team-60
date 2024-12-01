@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Team 60
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>Code-artist</title>
+        <link rel="icon" href="./media/logo-removebg-preview.png" type="image/jpeg">
+        <link rel="stylesheet" href="code-artist.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <header>     
+            <a href="index.html"> <img id="team-logo" src="./media/logo-removebg-preview.png" alt="Team-logo"></a>
+            <h1>Team 60</h1>
+            <button id="dark-mode-toggle" ><img src="./media/dark-mode (1).png"></button>
+            <button id="menu-button" >Menu</button>
+            <div id="menu-icons" class="hidden">
+                <a class="button" href="./index.html">Home</a>
+                <a class="button" href="./hour-of-code.html">Hour of Code</a>
+                <a class="button" href="./team-members.html">Team-members</a>
+                <a class="button" href="./code-artist.html">Code-artist</a>
+                <a class="button" href="./web-project.html">Web-Project</a>
+                <a class="button" href="./code-art.html">Code-Art</a>
+            </div> 
+        </header>
+      
+        <div style="text-align:center">
+            <canvas id="art-canvas" width="640" height="480">
+            </canvas>            
+        <button id="draw-button">Draw</button>
+    </div>  
+
+        <script type="text/javascript">
+            document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+            });
+        </script>
+        
+        <script type="text/javascript">
+             document.addEventListener('DOMContentLoaded', function() {
+                // Get reference to the 2D context of the canvas
+                let canvas = document.getElementById("art-canvas");
+                let context = canvas.getContext("2d");
+
+                // Function to draw the emblem step by step
+                function drawEmblemStepByStep(context) {
+                    let centerX = canvas.width / 2;
+                    let centerY = canvas.height / 2;
+                    let step = 0;
+
+                    function drawStep() {
+                        switch (step) {
+                            case 0:
+                                //red circle
+                                context.beginPath();
+                                context.arc(centerX, centerY, 200, 0, Math.PI * 2);
+                                context.fillStyle = "red";
+                                context.fill();
+                                context.closePath();
+                                break;
+                            case 1:
+                                // white circle
+                                context.beginPath();
+                                context.arc(centerX, centerY, 180, 0, Math.PI * 2);
+                                context.fillStyle = "white";
+                                context.fill();
+                                context.closePath();
+                                break;
+                            case 2:
+                                // red circle
+                                context.beginPath();
+                                context.arc(centerX, centerY, 160, 0, Math.PI * 2);
+                                context.fillStyle = "red";
+                                context.fill();
+                                context.closePath();
+                                break;
+                            case 3:
+                                // blue circle
+                                context.beginPath();
+                                context.arc(centerX, centerY, 140, 0, Math.PI * 2);
+                                context.fillStyle = "blue";
+                                context.fill();
+                                context.closePath();
+                                break;
+                            case 4:
+                                // star
+                                context.beginPath();
+                                context.moveTo(centerX, centerY);
+                                for (let i = 0; i < 7; i++) {
+                                    context.lineTo(centerX + 140 * Math.cos((18 + i * 72) * Math.PI / 180),
+                                                   centerY - 140 * Math.sin((18 + i * 72) * Math.PI / 180));
+                                    context.lineTo(centerX + 60 * Math.cos((54 + i * 72) * Math.PI / 180),
+                                                   centerY - 60 * Math.sin((54 + i * 72) * Math.PI / 180));
+                                }
+                                context.closePath();
+                                context.fillStyle = "silver";
+                                context.fill();
+                                break;
+                        }
+                        step++;
+                        if (step < 6) {
+                            setTimeout(drawStep, 500); // time between steps
+                        }
+                    }
+
+                    drawStep();
+                }
+
+                // event listener of the button
+                document.getElementById('draw-button').addEventListener('click', function() {
+                    drawEmblemStepByStep(context);
+                });
+            });
+        </script>
+    </body>
+</html>
+
+               
+        
+
+
+
+
+
+
+
+

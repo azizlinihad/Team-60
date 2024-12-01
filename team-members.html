@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Team 60
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>Team-members</title>
+        <link rel="icon" href="./media/logo-removebg-preview.png" type="image/jpeg"> 
+        <link rel="stylesheet" href="team-members.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <header>    
+            <h1>Team 60</h1>
+            <a href="index.html"> <img id="team-logo" src="./media/logo-removebg-preview.png" alt="Team-logo"></a>
+
+            <button id="dark-mode-toggle"><img src="./media/dark-mode (1).png"></button>
+            <button id="menu-button">Menu</button>
+            <div id="menu-icons" class="hidden">
+                <a class="button" href="./index.html">Home</a>
+                <a class="button" href="./hour-of-code.html">Hour of Code</a>
+                <a class="button" href="./team-members.html">Team-members</a>
+                <a class="button" href="./code-artist.html">Code-artist</a>
+                <a class="button" href="./web-project.html">Web-Project</a>
+                <a class="button" href="./code-art.html">Code-Art</a>
+            </div> 
+        </header>
+        
+        <section class="team-members">
+            <div class='member'>
+                <img src="./media/Jeyhun.jpg" alt='Jeyhun Naghiyev'>
+                <h3> Jeyhun Naghiyev</h3>
+                <p><a class="info">I am 17-year-old freshman IT student who is passionate about succeeding and improving. My role in the team is to coordinate and lead. My goal is to succeed in any field, and to achieve it, I will do everything, even if I fail. I will get up and try again until I reach my destination.</a></p>
+            </div>
+    
+            <div class='member'>
+                <img src="./media/Leman.jpg" alt='Laman Guliyeva'>
+                <h3> Laman Guliyeva</h3>
+                <p><a class="info">I'm Laman, a first-year math major at ADA University. My goal is to excel in mathematics and apply it to real-world problems. I love playing tennis, which helps me stay active. A fun fact about me is that I enjoy baking in my free time.</a></p>
+            </div>
+
+            <div class='member'>
+                <img src="./media/Nihad.jpg" alt='Nihad Azizli'>
+                <h3> Nihad Azizli</h3>
+                <p><a class="info">I am a 17-year-old first-year IT student passionate about innovation and solving real-world problems. Fun fact: at 16, I hiked 2600 meters to the peak of Qusar Laza, one of the highest mountains in Azerbaijan—because reaching new heights is kind of my thing!</a></p>
+            </div>
+            <div class='member'>
+                <img src="./media/Faig.jpg" alt='Faig Tahmazov'>
+                <h3> Faig Tahmazov</h3>
+                <p><a class="info">I am a 17-year-old first-year computer science student passionate about innovation and solving real-world problems. Fun fact: I’m a two-time World Championship medalist and a multiple-time champion of both Azerbaijan and Baku—because striving for excellence is in my DNA!</a></p>
+            </div>
+        </section>
+
+        <footer>
+            <section class="media">
+                <h2>Social Media</h2>
+                <img class='ADA-logo' src="./media/ada_logo_white.png" alt="ADA logo">
+                <a href="https://www.instagram.com/site_team_60/profilecard/?igsh=cjRmYng1MnF0dW1p"><img id="Instagram" src="./media/instagram.png"></a>
+                <a href="https://youtube.com/shorts/k1Us84suR4E?si=VI1F5R2Ng0DkChCM&sfnsn=wa"><img id='Youtube' src="./media/youtube.png"></a>
+            </section>
+        </footer>
+
+        <script type="text/javascript">
+            document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+            });
+        </script>
+    </body>
+</html>
